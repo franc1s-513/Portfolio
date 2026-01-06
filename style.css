@@ -2,20 +2,21 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f8fafc;   /* soft white */
+    background: #f0f9ff;   /* very light blue */
     color: #0f172a;        /* dark blue text */
 }
 
 /* Navbar */
 .navbar {
-    background: #0f172a;   /* dark blue */
+    background: #e0f2fe;   /* light blue */
+    color: #0f172a;
 }
 
 /* Buttons */
 .btn {
     display: inline-block;
-    background-color: #2563eb; /* blue */
-    color: white;
+    background-color: #38bdf8; /* light blue */
+    color: #ffffff;
     padding: 10px 20px;
     margin: 10px 0;
     text-decoration: none;
@@ -23,14 +24,14 @@ body {
     transition: 0.3s;
 }
 .btn:hover {
-    background-color: #1e40af; /* darker blue */
+    background-color: #0ea5e9; /* slightly darker blue */
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #1e3a8a, #2563eb);
-    color: white;
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+    color: #0f172a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,7 +61,7 @@ section h2::after {
     content: '';
     width: 60px;
     height: 3px;
-    background: #2563eb; /* blue underline */
+    background: #38bdf8; /* light blue underline */
     display: block;
     margin: 10px auto 0;
     border-radius: 2px;
@@ -74,20 +75,20 @@ section h2::after {
     gap: 20px;
 }
 .project-card {
-    background: #eff6ff;   /* light blue */
+    background: #ffffff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     width: 250px;
-    box-shadow: 0 4px 12px rgba(37,99,235,0.15);
+    box-shadow: 0 6px 16px rgba(56,189,248,0.25);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+    box-shadow: 0 10px 24px rgba(56,189,248,0.35);
 }
 .project-card h3 {
     margin-top: 0;
-    color: #1e3a8a;
+    color: #0284c7;
 }
 .project-card p {
     font-size: 0.95em;
@@ -98,12 +99,12 @@ section h2::after {
     display: inline-block;
     margin: 10px;
     text-decoration: none;
-    color: #2563eb;
+    color: #0284c7;
     font-weight: bold;
     transition: 0.3s;
 }
 .social-links a:hover {
-    color: #1e40af;
+    color: #0ea5e9;
 }
 .social-links i {
     margin-right: 8px;
@@ -111,8 +112,8 @@ section h2::after {
 
 /* Footer */
 footer {
-    background: #0f172a;
-    color: white;
+    background: #e0f2fe;
+    color: #0f172a;
     padding: 20px;
 }
 
