@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Francis | Portfolio</title>
-    <!-- Font Awesome CDN -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Header / Hero -->
+<!-- Hero Section -->
 <header class="hero">
-    <h1>Hi, I'm Francis 👋</h1>
-    <p>Computer Science Engineering Student | Aspiring Web Developer</p>
-    <a href="#contact" class="btn">Contact Me</a>
+    <div class="hero-content">
+        <h1>Hi, I'm Francis 👋</h1>
+        <p>Computer Science Engineering Student | Aspiring Web Developer</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
 </header>
 
 <!-- About Me -->
-<section id="about">
+<section id="about" class="fade-in">
     <h2>About Me</h2>
     <p>
         I am a beginner web developer learning HTML, CSS, and JavaScript.
@@ -26,7 +31,7 @@
 </section>
 
 <!-- Projects -->
-<section id="projects">
+<section id="projects" class="fade-in">
     <h2>Projects</h2>
     <div class="projects-container">
         <div class="project-card">
@@ -43,7 +48,7 @@
 </section>
 
 <!-- Contact -->
-<section id="contact">
+<section id="contact" class="fade-in">
     <h2>Contact</h2>
     <div class="social-links">
         <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i> Email</a>
@@ -52,12 +57,12 @@
     </div>
 </section>
 
-
 <!-- Footer -->
 <footer>
     <p>&copy; 2026 Francis. All rights reserved.</p>
 </footer>
 
+<!-- JS -->
 <script src="script.js"></script>
 </body>
 </html>
