@@ -21,18 +21,19 @@ body {
     background-color: #0ea5e9;
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, #e0f2fe, #bae6fd);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 80px;
+    padding: 0 10vw;            /* responsive horizontal space */
+    box-sizing: border-box;
 }
 
+
 .hero-left {
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .hero-name {
@@ -64,10 +65,11 @@ body {
 }
 
 .hero-right img {
-    width: 250px;
+    width: 260px;
     border-radius: 50%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
+
 
 /* Sections */
 section {
@@ -167,7 +169,6 @@ footer {
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
-        justify-content: center;
         padding: 40px 20px;
         text-align: left;
     }
