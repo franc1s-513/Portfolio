@@ -92,6 +92,7 @@ section h2::after {
     border-radius: 2px;
 }
 
+
 /* Projects Cards */
 .projects-container {
     display: flex;
@@ -116,6 +117,51 @@ section h2::after {
 .project-card p, .certificate-card p {
     font-size: 0.95em;
 }
+/* Area of Interest */
+.interest-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.interest-box {
+    background: #ffffff;
+    padding: 30px;
+    width: 320px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(56,189,248,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.interest-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(56,189,248,0.35);
+}
+
+.interest-box i {
+    font-size: 2.5rem;
+    color: #0284c7;
+    margin-bottom: 15px;
+}
+
+.interest-box h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.interest-box p {
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .interest-box {
+        width: 90%;
+    }
+}
+
 
 /* Certificates */
 .certificates {
