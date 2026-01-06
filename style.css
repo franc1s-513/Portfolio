@@ -45,6 +45,20 @@ body {
     font-size: 1.2em;
     margin: 10px 0 20px;
 }
+/* Hero Name Styling */
+.hero-name {
+    font-size: 4.5rem;      
+    font-weight: 800;
+    margin-bottom: 20px;    
+    letter-spacing: 2px;
+}
+
+/* Subtitle spacing */
+.hero-subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 30px;    /* space below subtitle */
+}
+
 
 /* Sections */
 section {
@@ -139,6 +153,12 @@ footer {
     .hero-content p {
         font-size: 1em;
     }
+    @media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.8rem;
+    }
+}
+
 }
 /* Certificates Section */
 .certificates {
