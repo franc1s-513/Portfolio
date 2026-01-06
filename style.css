@@ -1,28 +1,111 @@
 body {
+    /* General Styles */
+body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+    background: #f9f9f9;
+    color: #333;
     text-align: center;
 }
 
-h1 {
+/* Buttons */
+.btn {
+    display: inline-block;
     background-color: #222;
     color: white;
-    padding: 30px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #555;
+}
+
+/* Hero / Header */
+.hero {
+    background-color: #222;
+    color: white;
+    padding: 80px 20px;
+}
+.hero h1 {
     margin: 0;
+    font-size: 3em;
+}
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
 }
 
-h2 {
-    color: #333;
-    margin-top: 30px;
+/* Sections */
+section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-p, li {
-    color: #555;
-    font-size: 16px;
+/* Projects Cards */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.project-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.project-card h3 {
+    margin-top: 0;
+}
+.project-card p {
+    font-size: 0.95em;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
+.social-links a {
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.social-links a:hover {
+    color: #0077b5; /* LinkedIn blue hover */
+}
+.social-links i {
+    margin-right: 8px;
 }
