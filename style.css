@@ -27,38 +27,49 @@ body {
     background-color: #0ea5e9; /* slightly darker blue */
 }
 
-/* Hero Section */
+/* Hero Section - Left Aligned Layout */
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, #e0f2fe, #bae6fd);
-    color: #0f172a;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    padding-left: 80px;
 }
-.hero-content h1 {
-    font-size: 3em;
-    margin: 0;
+
+.hero-left {
+    max-width: 600px;
 }
-.hero-content p {
-    font-size: 1.2em;
-    margin: 10px 0 20px;
-}
-/* Hero Name Styling */
+
 .hero-name {
-    font-size: 4.5rem;      
+    font-size: 4.8rem;      
     font-weight: 800;
-    margin-bottom: 20px;    
+    margin-bottom: 10px;    
     letter-spacing: 2px;
+    color: #0f172a;
 }
 
-/* Subtitle spacing */
 .hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 30px;    /* space below subtitle */
+    font-size: 1.4rem;
+    margin-bottom: 30px;    
+    color: #334155;
 }
 
+/* Social Icons under Hero */
+.hero-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-icons a {
+    font-size: 1.6rem;
+    color: #0284c7;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.hero-icons a:hover {
+    color: #0ea5e9;
+    transform: translateY(-4px);
+}
 
 /* Sections */
 section {
@@ -138,28 +149,6 @@ footer {
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .project-card {
-        width: 80%;
-    }
-    .hero-content h1 {
-        font-size: 2.2em;
-    }
-    .hero-content p {
-        font-size: 1em;
-    }
-    @media (max-width: 768px) {
-    .hero-name {
-        font-size: 2.8rem;
-    }
-}
-
-}
 /* Certificates Section */
 .certificates {
     background: #f0f9ff; /* light blue */
@@ -200,6 +189,7 @@ footer {
     font-size: 0.85em;
     color: #64748b;
 }
+
 /* Certificate Category Titles */
 .cert-title {
     margin-top: 50px;
@@ -208,3 +198,38 @@ footer {
     text-align: left;
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+
+    .hero-name {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        padding-left: 20px;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero-icons {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .cert-title {
+        text-align: center;
+    }
+}
