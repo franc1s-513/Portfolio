@@ -86,9 +86,11 @@ section h2 {
 
 /* INTEREST */
 .interest-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
+
 
 .interest-card {
     background: white;
