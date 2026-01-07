@@ -1,54 +1,49 @@
-
+/* =========================
+   GLOBAL
+========================= */
 body {
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
-    background: linear-gradient(
-        180deg,
-        #bae6fd 0%,     /* top hero blue */
-        #e0f2fe 30%,
-        #f0f9ff 60%,
-        #ffffff 100%   /* bottom white */
-    );
     color: #0f172a;
     scroll-behavior: smooth;
+
+    /* ONE continuous background */
+    background: linear-gradient(
+        180deg,
+        #bae6fd 0%,
+        #e0f2fe 35%,
+        #f0f9ff 65%,
+        #ffffff 100%
+    );
 }
 
-
-/* NAVBAR */
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
-
+    background: rgba(224, 242, 254, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 15px 60px;
-    background: transparent;
-    transition: background 0.4s ease, box-shadow 0.4s ease;
-}
-/* Navbar when scrolled */
-.navbar.scrolled {
-    background: rgba(224, 242, 254, 0.95); /* same theme */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #0f172a;
+    color: #0284c7;
 }
 
-/* Nav links */
 .nav-links a {
     margin-left: 25px;
     text-decoration: none;
     font-weight: 500;
     color: #0f172a;
-    position: relative;
     transition: color 0.3s;
 }
 
@@ -56,78 +51,69 @@ body {
     color: #0284c7;
 }
 
-/* Active link */
-.nav-links a.active {
-    color: #0284c7;
-}
-
-
-.logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #0284c7;
-}
-
-.nav-links a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #0284c7;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: #0ea5e9;
-}
-
-/* HERO */
-/* HERO SECTION FIX */
+/* =========================
+   HERO (NO BOX LOOK)
+========================= */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 70px; /* navbar height */
+    padding: 120px 80px 80px;
 }
 
 .hero-left {
     max-width: 900px;
-    width: 100%;
-    padding: 0 12%;
 }
 
 .hero-name {
     font-size: 4.8rem;
     font-weight: 800;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 }
 
 .hero-subtitle {
     font-size: 1.5rem;
     margin-bottom: 35px;
+    color: #334155;
 }
 
+.hero-icons {
+    display: flex;
+    gap: 20px;
+}
 
+.hero-icons a {
+    font-size: 1.6rem;
+    color: #0284c7;
+    transition: transform 0.3s, color 0.3s;
+}
 
-/* SECTIONS */
+.hero-icons a:hover {
+    color: #0ea5e9;
+    transform: translateY(-4px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
 section {
-    padding: 100px 20px;
-    max-width: 1000px;
+    padding: 90px 20px;
+    max-width: 1100px;
     margin: 0 auto;
-    background: transparent;
 }
-
 
 section h2 {
     text-align: center;
     margin-bottom: 40px;
 }
 
-/* INTEREST */
+/* =========================
+   AREA OF INTEREST
+========================= */
 .interest-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;                 /* SPACE BETWEEN BOXES */
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
 }
 
 .interest-card {
@@ -137,20 +123,19 @@ section h2 {
     box-shadow: 0 6px 16px rgba(56,189,248,0.25);
 }
 
-
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;                 /* SPACE BETWEEN PROJECT BOXES */
-    margin-top: 30px;
+    gap: 30px;
 }
 
-
 .project-card {
-    background: white;
-    padding: 20px;
+    background: #ffffff;
+    padding: 22px;
     border-radius: 12px;
     width: 260px;
     box-shadow: 0 6px 16px rgba(56,189,248,0.25);
@@ -158,95 +143,72 @@ section h2 {
 
 .btn {
     display: inline-block;
-    margin-top: 10px;
-    padding: 8px 14px;
+    margin-top: 12px;
+    padding: 8px 16px;
     background: #38bdf8;
     color: white;
     border-radius: 6px;
     text-decoration: none;
 }
 
-/* CERTIFICATES */
-/* Certificates Section */
-.certificates {
-    background: #f0f9ff;
-    padding: 60px 20px;
-}
-
-/* Grid like project cards */
+/* =========================
+   CERTIFICATES
+========================= */
 .certificates-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;              /* IMPORTANT: spacing between cards */
-    margin-top: 25px;
-    margin-bottom: 40px;
+    gap: 30px;
+    margin-top: 30px;
 }
 
-/* Certificate Card (same feel as project cards) */
 .certificate-card {
     background: #ffffff;
     padding: 22px;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(56,189,248,0.25);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.certificate-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 24px rgba(56,189,248,0.35);
 }
 
 .certificate-card h4 {
     color: #0284c7;
-    margin-bottom: 8px;
 }
 
-.certificate-card p {
-    margin: 4px 0;
-    font-size: 0.95rem;
-}
-
-.certificate-card span {
-    font-size: 0.85rem;
-    color: #64748b;
-}
-
-/* Category Title */
 .cert-title {
-    margin-top: 50px;
+    margin: 50px 0 15px;
     font-size: 1.4rem;
     color: #0284c7;
 }
 
-section {
-    padding: 80px 20px;        
-}
-
-
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 .social-links a {
     display: block;
-    margin: 10px 0;
+    margin: 12px 0;
     text-align: center;
-    text-decoration: none;
     color: #0284c7;
+    text-decoration: none;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 footer {
     text-align: center;
     padding: 20px;
     background: #e0f2fe;
 }
 
-/* FADE IN */
+/* =========================
+   FADE-IN (SAFE)
+========================= */
 .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: 0.8s ease;
+    opacity: 1;                 /* IMPORTANT FIX */
+    transform: none;
 }
 
-/* RESPONSIVE */
+/* =========================
+   RESPONSIVE
+========================= */
 @media (max-width: 768px) {
     .hero {
         padding: 120px 20px;
@@ -255,8 +217,8 @@ footer {
     .hero-name {
         font-size: 2.8rem;
     }
-}
 
-#home {
-    padding-top: 120px;
+    .nav-links {
+        display: none; /* optional for now */
+    }
 }
