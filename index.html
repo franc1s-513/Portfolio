@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Francis | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Francis Fernando, a Computer Science Engineering Student specializing in Web Development and Java.">
+    <title>Francis Fernando | CS Engineer Portfolio</title>
 
-    <!-- Google Font -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/606/606204.png" type="image/x-icon">
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,6 +17,10 @@
 <!-- NAVBAR -->
 <header class="navbar">
     <div class="logo">Francis</div>
+
+    <div id="theme-toggle" class="theme-switch">
+        <i class="fas fa-moon"></i>
+    </div>
 
     <div class="menu-toggle">
         <i class="fas fa-bars"></i>
@@ -37,6 +41,8 @@
   <div class="hero-left">
     <h1 class="hero-name">Francis Fernando</h1>
     <p class="hero-subtitle">Computer Science Engineering Student</p>
+    <a href="assets/resume.pdf" class="btn resume-btn" target="_blank">
+        <i class="fas fa-file-download"></i> Download Resume</a>
     <div class="hero-icons">
       <a href="#"><i class="fab fa-instagram"></i></a>
       <a href="mailto:yourmail@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -55,31 +61,39 @@
 </section>
 
 <!-- AREA OF INTEREST -->
-<section id="interests" class="fade-in">
-    <h2>Area of Interest</h2>
-
-    <div class="interest-container">
-        <div class="interest-card">
-            <h3>Full Stack Development</h3>
-            <p>HTML, CSS, JavaScript, Java, Git, GitHub</p>
-        </div>
-
-        <div class="interest-card">
-            <h3>Frontend Development</h3>
-            <p>UI Design, Responsive Layouts, Animations</p>
-        </div>
-
-        <div class="interest-card">
-            <h3>Backend Basics</h3>
-            <p>Java, APIs, Databases (Learning)</p>
-        </div>
-
-        <div class="interest-card">
-            <h3>Problem Solving</h3>
-            <p>DSA Basics, Logical Thinking</p>
+<div class="interest-container">
+    <div class="interest-card">
+        <i class="fas fa-code-branch icon-style"></i>
+        <h3>Full Stack Development</h3>
+        <div class="skills-list">
+            <span>HTML5</span> <span>CSS3</span> <span>JavaScript</span> <span>Java</span>
         </div>
     </div>
-</section>
+
+    <div class="interest-card">
+        <i class="fas fa-laptop-code icon-style"></i>
+        <h3>Frontend Development</h3>
+        <div class="skills-list">
+            <span>UI Design</span> <span>Responsive</span> <span>Animations</span>
+        </div>
+    </div>
+
+    <div class="interest-card">
+        <i class="fas fa-database icon-style"></i>
+        <h3>Backend Basics</h3>
+        <div class="skills-list">
+            <span>Java</span> <span>APIs</span> <span>SQL (Learning)</span>
+        </div>
+    </div>
+
+    <div class="interest-card">
+        <i class="fas fa-brain icon-style"></i>
+        <h3>Problem Solving</h3>
+        <div class="skills-list">
+            <span>DSA</span> <span>Logic</span> <span>OOP</span>
+        </div>
+    </div>
+</div>
 
 
 <!-- PROJECTS -->

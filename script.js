@@ -52,3 +52,19 @@ window.addEventListener("scroll", () => {
 menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("show");
 });
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = themeToggle.querySelector("i");
+
+themeToggle.addEventListener("click", () => {
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    
+    if (isDark) {
+        document.documentElement.setAttribute("data-theme", "light");
+        themeIcon.classList.replace("fa-sun", "fa-moon");
+        localStorage.setItem("theme", "light");
+    } else {
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeIcon.classList.replace("fa-moon", "fa-sun");
+        localStorage.setItem("theme", "dark");
+    }
+});

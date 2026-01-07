@@ -1,23 +1,52 @@
 /* =========================
-   GLOBAL STYLES
+   1. THEME VARIABLES
+========================= */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #0f172a;
+    --card-bg: #ffffff;
+    --nav-bg: rgba(224, 242, 254, 0.88);
+    --bg-gradient: linear-gradient(180deg, #bae6fd 0%, #e0f2fe 35%, #f0f9ff 65%, #ffffff 100%);
+}
+
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --card-bg: #1e293b;
+    --nav-bg: rgba(15, 23, 42, 0.95);
+    --bg-gradient: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+}
+
+/* =========================
+   2. GLOBAL STYLES
 ========================= */
 body {
     margin: 0;
     font-family: 'Roboto', Arial, sans-serif;
-    color: #0f172a;
+    color: var(--text-color);
     scroll-behavior: smooth;
-    background: linear-gradient(
-        180deg,
-        #bae6fd 0%,
-        #e0f2fe 35%,
-        #f0f9ff 65%,
-        #ffffff 100%
-    );
+    background: var(--bg-gradient); /* Uses the variable! */
+    transition: background 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
 }
 
+/* Ensure cards use the theme background */
+.interest-card, .project-card, .certificate-card {
+    background: var(--card-bg) !important;
+    color: var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Moon/Sun Icon Style */
+.theme-switch {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #0284c7;
+    transition: transform 0.3s ease;
+}
+
 /* =========================
-   NAVBAR
+   3. NAVBAR (Updated for Theme)
 ========================= */
 .navbar {
     position: fixed;
@@ -29,16 +58,15 @@ body {
     gap: 35px;
     padding: 12px 36px;
     width: fit-content;
-    background: rgba(224, 242, 254, 0.88);
+    background: var(--nav-bg); /* Uses the variable! */
     border-radius: 999px;
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    box-shadow: 0 10px 28px rgba(56, 189, 248, 0.28);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: all 0.3s ease;
 }
-
 .logo {
     font-size: 1.05rem;
     font-weight: 700;
@@ -142,7 +170,26 @@ body {
 .hero-icons a:hover {
     transform: scale(1.2);
 }
+.resume-btn {
+    margin-bottom: 25px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: #0284c7; /* A solid blue to make it pop */
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
 
+.resume-btn:hover {
+    background: #0369a1;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(2, 132, 199, 0.4);
+}
 @keyframes slideUp {
     from {
         transform: translateY(30px);
@@ -200,7 +247,38 @@ section h2 {
     transform: translateY(-8px);
     box-shadow: 0 12px 28px rgba(56,189,248,0.35);
 }
+/* Style for the icons at the top of cards */
+.icon-style {
+    font-size: 2rem;
+    color: #0284c7;
+    margin-bottom: 15px;
+}
 
+/* Container for the skill pills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Individual skill pill style */
+.skills-list span {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 1px solid #bae6fd;
+    transition: all 0.3s ease;
+}
+
+/* Small hover effect for the pills */
+.skills-list span:hover {
+    background: #38bdf8;
+    color: white;
+}
 /* =========================
    PROJECTS
 ========================= */
