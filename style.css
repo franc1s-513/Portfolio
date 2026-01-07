@@ -129,13 +129,57 @@ section h2 {
 }
 
 /* CERTIFICATES */
+/* Certificates Section */
+.certificates {
+    background: #f0f9ff;
+    padding: 60px 20px;
+}
+
+/* Grid like project cards */
 .certificates-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;                 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;              /* IMPORTANT: spacing between cards */
     margin-top: 25px;
-    margin-bottom: 40px;       
+    margin-bottom: 40px;
 }
+
+/* Certificate Card (same feel as project cards) */
+.certificate-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(56,189,248,0.25);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(56,189,248,0.35);
+}
+
+.certificate-card h4 {
+    color: #0284c7;
+    margin-bottom: 8px;
+}
+
+.certificate-card p {
+    margin: 4px 0;
+    font-size: 0.95rem;
+}
+
+.certificate-card span {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* Category Title */
+.cert-title {
+    margin-top: 50px;
+    font-size: 1.4rem;
+    color: #0284c7;
+}
+
 section {
     padding: 80px 20px;        
 }
