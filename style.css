@@ -1,12 +1,16 @@
-* {
-    box-sizing: border-box;
-}
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: #f0f9ff;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(
+        180deg,
+        #bae6fd 0%,     
+        #e0f2fe 35%,
+        #f0f9ff 65%,
+        #ffffff 100%   
+    );
     color: #0f172a;
+    scroll-behavior: smooth;
 }
 
 /* NAVBAR */
@@ -244,22 +248,11 @@ footer {
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .hero {
-        padding: 0 20px;
-        justify-content: center;
-        text-align: left;
+        padding: 120px 20px;
     }
 
     .hero-name {
         font-size: 2.8rem;
     }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .hero-icons {
-        margin-top: 15px;
-    }
 }
-
 
