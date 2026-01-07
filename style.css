@@ -13,6 +13,7 @@ body {
         #f0f9ff 65%,
         #ffffff 100%
     );
+    overflow-x: hidden;
 }
 
 /* =========================
@@ -35,6 +36,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.45);
     box-shadow: 0 10px 28px rgba(56, 189, 248, 0.28);
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -42,6 +44,11 @@ body {
     font-weight: 700;
     color: #0284c7;
     white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
 }
 
 .nav-links a {
@@ -66,7 +73,16 @@ body {
 
 .navbar.scrolled {
     background: rgba(224, 242, 254, 0.95);
-    backdrop-filter: blur(10px);
+    top: 0;
+    width: 100%;
+    border-radius: 0;
+    left: 0;
+    transform: translateX(0);
+    justify-content: space-around;
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
 }
 
 /* =========================
@@ -81,6 +97,10 @@ body {
     text-align: center;
     padding: 160px 40px 80px;
     background: transparent;
+    
+    /* FIX: Ensure the landing page is visible immediately */
+    opacity: 1 !important; 
+    transform: translateY(0) !important;
 }
 
 .hero-left {
@@ -92,7 +112,6 @@ body {
     color: #0f172a;
     margin-bottom: 20px;
     animation: slideUp 1s ease forwards;
-    opacity: 0;
 }
 
 .hero-subtitle {
@@ -101,7 +120,7 @@ body {
     margin-bottom: 30px;
     animation: slideUp 1s ease forwards;
     animation-delay: 0.2s;
-    opacity: 0;
+    opacity: 0; /* Starts hidden for animation */
 }
 
 .hero-icons {
@@ -110,7 +129,17 @@ body {
     justify-content: center;
     animation: slideUp 1s ease forwards;
     animation-delay: 0.4s;
-    opacity: 0;
+    opacity: 0; /* Starts hidden for animation */
+}
+
+.hero-icons a {
+    font-size: 1.5rem;
+    color: #0284c7;
+    transition: transform 0.3s ease;
+}
+
+.hero-icons a:hover {
+    transform: scale(1.2);
 }
 
 @keyframes slideUp {
@@ -131,11 +160,12 @@ section {
     padding: 90px 20px;
     max-width: 1100px;
     margin: 0 auto;
-    opacity: 0;
+    opacity: 0; /* Default hidden for scroll effect */
     transform: translateY(40px);
-    transition: all 0.8s ease;
+    transition: all 0.8s ease-out;
 }
 
+/* This class is added by JavaScript as you scroll */
 section.show {
     opacity: 1;
     transform: translateY(0);
@@ -144,6 +174,8 @@ section.show {
 section h2 {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 2rem;
+    color: #0f172a;
 }
 
 /* =========================
@@ -200,6 +232,11 @@ section h2 {
     color: #ffffff;
     border-radius: 6px;
     text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0284c7;
 }
 
 /* =========================
@@ -227,6 +264,7 @@ section h2 {
 
 .certificate-card h4 {
     color: #0284c7;
+    margin-bottom: 5px;
 }
 
 .cert-title {
@@ -238,12 +276,24 @@ section h2 {
 /* =========================
    CONTACT
 ========================= */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
 .social-links a {
-    display: block;
-    margin: 12px 0;
+    display: inline-block;
     text-align: center;
     color: #0284c7;
     text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #0f172a;
 }
 
 /* =========================
@@ -251,38 +301,50 @@ section h2 {
 ========================= */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     background: #e0f2fe;
+    margin-top: 50px;
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
-    .hero {
-        padding: 120px 20px;
+    .navbar {
+        width: 90%;
+        justify-content: space-between;
     }
-    .hero-name {
-        font-size: 2.8rem;
-    }
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-    .hero-left {
-        max-width: 90%;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-    }
+
     .menu-toggle {
         display: block;
         font-size: 1.4rem;
         color: #0284c7;
         cursor: pointer;
     }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(224, 242, 254, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
     .nav-links.show {
         display: flex;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
     }
 }
