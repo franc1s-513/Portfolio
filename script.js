@@ -1,22 +1,22 @@
-// Navbar background on scroll
+// Select elements
 const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-links a");
 const sections = document.querySelectorAll("section");
 
+// Scroll event
 window.addEventListener("scroll", () => {
-    // Add background after scroll
+    // 1️⃣ Navbar background change
     if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
     }
 
-    // Active link change
+    // 2️⃣ Active link highlighting
     let current = "";
-
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (scrollY >= sectionTop) {
+        const sectionTop = section.offsetTop - 120; // adjust offset if needed
+        if (window.scrollY >= sectionTop) {
             current = section.getAttribute("id");
         }
     });
@@ -29,22 +29,3 @@ window.addEventListener("scroll", () => {
     });
 });
 
-
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 160;
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-        }
-    });
-});
