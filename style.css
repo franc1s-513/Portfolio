@@ -15,17 +15,52 @@ body {
 
 
 /* NAVBAR */
+/* NAVBAR */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #e0f2fe;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    z-index: 1000;
+
+    padding: 15px 60px;
+    background: transparent;
+    transition: background 0.4s ease, box-shadow 0.4s ease;
 }
+/* Navbar when scrolled */
+.navbar.scrolled {
+    background: rgba(224, 242, 254, 0.95); /* same theme */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+/* Nav links */
+.nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #0f172a;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0284c7;
+}
+
+/* Active link */
+.nav-links a.active {
+    color: #0284c7;
+}
+
 
 .logo {
     font-size: 1.4rem;
@@ -70,6 +105,7 @@ body {
     font-size: 1.5rem;
     margin-bottom: 35px;
 }
+
 
 
 /* SECTIONS */
@@ -221,3 +257,6 @@ footer {
     }
 }
 
+#home {
+    padding-top: 120px;
+}
