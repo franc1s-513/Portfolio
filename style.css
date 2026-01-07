@@ -88,24 +88,27 @@ section h2 {
 .interest-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 30px;                 /* SPACE BETWEEN BOXES */
+    margin-top: 30px;
 }
-
 
 .interest-card {
-    background: white;
-    padding: 30px;
+    background: #ffffff;
+    padding: 25px;
     border-radius: 12px;
-    width: 300px;
-    text-align: center;
     box-shadow: 0 6px 16px rgba(56,189,248,0.25);
 }
+
 
 /* PROJECTS */
 .projects-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;                 /* SPACE BETWEEN PROJECT BOXES */
+    margin-top: 30px;
 }
+
 
 .project-card {
     background: white;
@@ -127,15 +130,16 @@ section h2 {
 
 /* CERTIFICATES */
 .certificates-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;                 
+    margin-top: 25px;
+    margin-bottom: 40px;       
+}
+section {
+    padding: 80px 20px;        
 }
 
-.certificate-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-}
 
 /* CONTACT */
 .social-links a {
