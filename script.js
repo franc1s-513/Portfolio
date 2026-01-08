@@ -7,20 +7,27 @@ const navMenu = document.querySelector(".nav-links");
 
 // 1️⃣ Intersection Observer (Fixes the "Hidden Content" error)
 const observerOptions = {
-    threshold: 0.1 // Triggers when 10% of the section is visible
+    threshold: 0.15
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("show"); // Adds the class to make it visible
+            entry.target.classList.add('show');
+            
+            // If the element has children (like cards), we stagger them
+            const children = entry.target.querySelectorAll('.interest-card, .project-card, .certificate-card');
+            children.forEach((child, index) => {
+                setTimeout(() => {
+                    child.style.opacity = "1";
+                    child.style.transform = "translateY(0)";
+                }, index * 100); // 100ms delay between each card
+            });
         }
     });
 }, observerOptions);
 
-sections.forEach(section => {
-    observer.observe(section);
-});
+document.querySelectorAll('section').forEach(section => observer.observe(section));
 
 // 2️⃣ Navbar Scroll & Active Link Logic
 window.addEventListener("scroll", () => {
